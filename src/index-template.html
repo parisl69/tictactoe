@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.1.min.js"
+			integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+			crossorigin="anonymous"
+			defer
+		></script>
+		<title><%= htmlWebpackPlugin.options.title %></title>
+	</head>
+	<body>
+		<div class="container">
+			<div id="win-lines">
+				<!-- Add .show to show -->
+				<!-- Rows -->
+				<div class="win-line" id="win-line-1"></div>
+				<div class="win-line" id="win-line-2"></div>
+				<div class="win-line" id="win-line-3"></div>
+				<!-- Columns -->
+				<div class="win-line" id="win-line-4"></div>
+				<div class="win-line" id="win-line-5"></div>
+				<div class="win-line" id="win-line-6"></div>
+				<!-- Diagonal UL->BR -->
+				<div class="win-line" id="win-line-7"></div>
+				<!-- Diagonal UR->BL -->
+				<div class="win-line" id="win-line-8"></div>
+			</div>
+			<div id="top-info-wrapper">
+				<!-- Add class .o /.x to img to change src -->
+				<div class="you">You<img /></div>
+				<div class="opp">Opponent<img /></div>
+			</div>
+			<div id="ttt-board">
+				<!-- Add class .o / .x ALWAYS WITH .you / .opp -->
+				<div class="ttt-cell" id="c1"></div>
+				<div class="ttt-cell" id="c2"></div>
+				<div class="ttt-cell" id="c3"></div>
+				<div class="ttt-cell" id="c4"></div>
+				<div class="ttt-cell" id="c5"></div>
+				<div class="ttt-cell" id="c6"></div>
+				<div class="ttt-cell" id="c7"></div>
+				<div class="ttt-cell" id="c8"></div>
+				<div class="ttt-cell" id="c9"></div>
+			</div>
+			<div id="bottom-info-wrapper">&nbsp;</div>
+		</div>
+	</body>
+</html>
