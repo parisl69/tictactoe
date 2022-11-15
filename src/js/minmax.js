@@ -1,4 +1,5 @@
 /**
+ * This code is contributed by rag2127
  * https://www.geeksforgeeks.org/minimax-algorithm-in-game-theory-set-3-tic-tac-toe-ai-finding-optimal-move/
  **/
 
@@ -181,5 +182,3 @@ export { findBestMove }
 // console.table(board)
 // console.log('The Optimal Move is :')
 // console.log('ROW: ' + bestMove.row + ' COL: ' + bestMove.col)
-
-// This code is contributed by rag2127

@@ -116,13 +116,17 @@ body {
 		margin-top: 2rem;
 		color: #fff;
 		height: $top-info-height;
+		font-size: 2rem;
+		display: flex;
+		align-items: center;
+		justify-items: center;
 		#play-again-button {
 			padding: 10px;
-			margin-left: 10px;
+			margin-left: 20px;
 			border: none;
 			border-radius: 5px;
 			background-color: lighten($purple, 50%);
-			font-size: 1rem;
+			font-size: 1.5rem;
 			cursor: pointer;
 			&:hover {
 				background-color: lighten($purple, 55%);
