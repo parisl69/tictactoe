@@ -1,6 +1,7 @@
 import Player from './Player.js'
 import { delay } from './delay.js'
-import { findBestMove } from './minmax'
+import { winPatterns } from './winpatterns.js'
+import { findBestMove } from './minmax.js'
 
 const playAgainButton = '<button id="play-again-button">Play again</button>'
 
@@ -94,9 +95,28 @@ export default class Game {
 		})
 	}
 	/**
-	 * Computer logic for play using minmax algorithm
+	 * Computer logic for play
 	 */
 	oppPlayLogic() {
+		// Check if opp can win then check to prevent player from winning
+		const checkArr = ['opp', 'you']
+		for (let checkIndex = 0; checkIndex < checkArr.length; checkIndex++) {
+			const check = checkArr[checkIndex]
+			for (let pat_index = 0; pat_index < winPatterns.length; pat_index++) {
+				const pat = winPatterns[pat_index]
+				if (
+					this.board[pat[0]] === check &&
+					this.board[pat[1]] === check &&
+					this.board[pat[2]] === 'empty'
+				) {
+					const cell = $('#c' + (pat[2] + 1).toString())
+					cell.addClass(this.opp.mark + ' opp')
+					this.board[pat[2]] = 'opp'
+					return
+				}
+			}
+		}
+		// Play using findBestMove()
 		let board = this.get2dBoard()
 		const bestMove = findBestMove(board)
 		console.log('Computer plays ' + bestMove.row + ', ' + bestMove.col)
@@ -104,6 +124,7 @@ export default class Game {
 		const cell = $('#c' + (moveIndex + 1).toString())
 		cell.addClass(this.opp.mark + ' opp')
 		this.board[moveIndex] = 'opp'
+		return
 	}
 	/**
 	 * Checks if game is still running, has a win or a draw
