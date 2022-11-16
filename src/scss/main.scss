@@ -185,4 +185,23 @@ body {
 			width: math.hypot($board-size, $board-size);
 		}
 	}
+
+	#copy-info {
+		position: absolute;
+		width: $board-size;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		bottom: 0;
+		margin-bottom: 20px;
+		* {
+			color: lighten($purple, 40%);
+		}
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
 }
