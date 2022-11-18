@@ -28,7 +28,7 @@ I believe that you will find the overall AI behaviour quite competitive, resulti
 
 A demo is available here:
 
-https://beamish-pasca-bf68cf.netlify.app/
+https://tic-tac-toe-pl2022.netlify.app
 
 ## Instalation
 
